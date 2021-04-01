@@ -10,22 +10,24 @@
     <LinearLayout
         android:layout_marginTop="0dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/pizza"
-            android:paddingTop="0dp"></ImageView>
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,24 +41,27 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/border"
                     android:gravity="center"
-                    android:text="Size"></TextView>
+                    android:text="@string/size" />
 
                 <RadioGroup
+                    android:id="@+id/rbgSize"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp">
 
                     <RadioButton
                         android:id="@+id/rbLarge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Large" />
+                        android:checked="true"
+                        android:text="@string/large" />
 
                     <RadioButton
                         android:id="@+id/rbMedium"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Medium" />
+                        android:text="@string/medium" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -73,24 +78,27 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/border"
                     android:gravity="center"
-                    android:text="Crust"></TextView>
+                    android:text="@string/crust" />
 
                 <RadioGroup
+                    android:id="@+id/rbgCrust"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp">
 
                     <RadioButton
                         android:id="@+id/rbThick"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Thick" />
+                        android:checked="true"
+                        android:text="@string/thick" />
 
                     <RadioButton
                         android:id="@+id/rbThin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Thin" />
+                        android:text="@string/thin" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -109,27 +117,29 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:gravity="center"
-                android:text="Topping"></TextView>
+                android:text="@string/topping" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight=".5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
 
                 <CheckBox
-                    android:id="@+id/cbCF"
+                    android:id="@+id/cbCrayfish"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Crayfish" />
+                    android:text="@string/crayfish" />
 
 <!--                <CheckBox-->
 <!--                    android:id="@+id/cbLobster"-->
@@ -141,19 +151,19 @@
                     android:id="@+id/cbShrimps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Shrimps" />
+                    android:text="@string/shrimps" />
 
                 <CheckBox
                     android:id="@+id/cbMozzarella"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mozzarella" />
+                    android:text="@string/mozzarella" />
 
                 <CheckBox
                     android:id="@+id/cbTurkey"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Turkey" />
+                    android:text="@string/turkey" />
 
             </LinearLayout>
 
@@ -162,33 +172,34 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight=".5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
 
                 <CheckBox
 
-                    android:id="@+id/cbham"
+                    android:id="@+id/cbHam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ham"
+                    android:text="@string/ham"
                     tools:ignore="InvalidId" />
 
                 <CheckBox
                     android:id="@+id/cbMeatballs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Meatballs" />
+                    android:text="@string/meatballs" />
 
                 <CheckBox
                     android:id="@+id/cbBBQChick"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BBQ Chicken" />
+                    android:text="@string/bbq_chicken" />
 
                 <CheckBox
                     android:id="@+id/cbBacon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bacon" />
+                    android:text="@string/bacon" />
 
 <!--                <CheckBox-->
 <!--                    android:id="@+id/cbFungi"-->
@@ -212,34 +223,36 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:gravity="center"
-                android:text="Beverage"></TextView>
+                android:text="@string/beverage" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight=".5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
 
                 <CheckBox
                     android:id="@+id/cbMargarita"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Margarita"
+                    android:text="@string/margarita"
                     tools:ignore="InvalidId" />
 
                 <CheckBox
                     android:id="@+id/cbCerveza"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cerveza"
+                    android:text="@string/cerveza"
                     tools:ignore="InvalidId" />
             </LinearLayout>
 
@@ -248,30 +261,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight=".5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
 
                 <CheckBox
                     android:id="@+id/cbSoda"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Soda"
+                    android:text="@string/soda"
                     tools:ignore="InvalidId" />
 
                 <CheckBox
                     android:id="@+id/cbTequilla"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tequilla"
+                    android:text="@string/tequilla"
                     tools:ignore="InvalidId" />
             </LinearLayout>
-
-
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="1">
+            android:weightSum="1"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -281,11 +295,11 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btn1"
+                    android:id="@+id/btnOrder"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/black"
-                    android:text="PLACE YOUR ORDER"></Button>
+                    android:text="@string/place_your_order" />
             </LinearLayout>
 
             <LinearLayout
@@ -296,11 +310,11 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btn2"
+                    android:id="@+id/btnAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/teal_700"
-                    android:text="OUR ADDRESS"></Button>
+                    android:text="@string/our_address" />
             </LinearLayout>
         </LinearLayout>
 

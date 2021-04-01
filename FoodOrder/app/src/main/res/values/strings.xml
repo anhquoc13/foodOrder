@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">FoodOrder</string>
+    <string name="size">Size</string>
+    <string name="large">Large</string>
+    <string name="medium">Medium</string>
+    <string name="crust">Crust</string>
+    <string name="thick">Thick</string>
+    <string name="thin">Thin</string>
+    <string name="topping">Topping</string>
+    <string name="crayfish">Crayfish</string>
+    <string name="shrimps">Shrimps</string>
+    <string name="mozzarella">Mozzarella</string>
+    <string name="turkey">Turkey</string>
+    <string name="ham">ham</string>
+    <string name="meatballs">Meatballs</string>
+    <string name="bbq_chicken">BBQ Chicken</string>
+    <string name="bacon">Bacon</string>
+    <string name="beverage">Beverage</string>
+    <string name="margarita">Margarita</string>
+    <string name="cerveza">Cerveza</string>
+    <string name="soda">Soda</string>
+    <string name="tequilla">Tequilla</string>
+    <string name="place_your_order">PLACE YOUR ORDER</string>
+    <string name="our_address">OUR ADDRESS</string>
+    <string name="order_details">Order details:</string>
 </resources>
